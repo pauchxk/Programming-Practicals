@@ -1,4 +1,3 @@
-###UPLOAD ME TO GITHUB!!!###
 from graphics import *
 
 def sticky():
