@@ -135,7 +135,7 @@ def tenColouredRectangles():
 #five clicks of the mouse to determine the positions of its features,
 #as illustrated in the figure below. Each feature should be drawn
 #as the user clicks the points.
-###note: i'm not doing it as 5 clicks, or as symmetrical. purely because it's more fun this way
+###note: i'm not doing it as 5 clicks, or as symmetrical, purely because it's more fun this way.
 def sticky():
 
     #create graphics window and initialise points list
