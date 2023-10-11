@@ -98,8 +98,8 @@ def fibonacci():
     cur = 1
     old = 1
     i = 1
-    while i < n:
-        cur, old, i = cur+old, cur, i+1
+    for i in range(n-2):
+        cur, old = cur+old, cur
     print(cur)
 
 #11: Harder: Write a function selectCoins that asks the user an amount of money 
