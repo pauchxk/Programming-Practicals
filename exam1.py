@@ -1,3 +1,4 @@
+#Score: 10/10#
 from graphics import *
 
 def theBoxer():
