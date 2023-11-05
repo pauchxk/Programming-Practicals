@@ -1,6 +1,3 @@
-#NOTE: FIX Y POS
-
-
 import math
 from graphics import *
 
