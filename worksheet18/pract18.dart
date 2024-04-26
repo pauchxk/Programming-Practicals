@@ -57,3 +57,61 @@ class Student {
     }
   }
 }
+
+class Module {
+  String name;
+  int credits;
+
+  Module(this.name, {this.credits = 20});
+}
+
+class Course {
+  int totalCredits = 0;
+  int _maxCredits = 120;
+  String name;
+  List<Module> modules = [];
+
+  Course(this.name);
+
+  void addModule(Module module) {
+    if (totalCredits + module.credits <= _maxCredits) {
+      modules.add(module);
+      totalCredits += module.credits;
+    }
+  }
+
+  int get maxCredits => _maxCredits;
+
+  String toString() {
+    String output = 'Course name: $name, Modules: \n';
+    for (Module module in modules) {
+      output += ' ${module.name} (${module.credits} credits)\n';
+    }
+    output += 'Total credits: $totalCredits';
+    return output;
+  }
+}
+
+class Shape {
+  double x = 0.0;
+  double y = 0.0;
+
+  Shape(this.x, this.y);
+
+  void move(double dx, double dy) {
+    x += dx;
+    y += dy;
+  }
+
+  String toString() => 'x: $x, y: $y';
+}
+
+class Circle extends Shape {
+  double radius = 0.0;
+
+  Circle(double x, double y, double radius) : super(x, y) {
+    this.radius = radius;
+  }
+
+  String toString() => '${super.toString()}, radius: $radius';
+}
